@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: path/to/your/sft-model
+adapter_name_or_path: path/to/your/lora-adapter
+template: qwen
+trust_remote_code: true
+
+### export
+export_dir: path/to/your/merged-model
+export_size: 2
+export_device: cpu  # choices: [cpu, auto]
+export_legacy_format: false

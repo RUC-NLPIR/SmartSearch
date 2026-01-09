@@ -1,0 +1,9 @@
+# ------------------------------------------------Environment Settings------------------------------------------------#
+gpu_id: "2,3"
+
+# -------------------------------------------------Retrieval Settings------------------------------------------------#
+# If set the name, the model path will be find in global paths
+retrieval_method: "your-retrieval-method-path"  # name or path of the retrieval model. 
+index_path: "your-index-path" # path to the indexed file
+faiss_gpu: True # whether use gpu to hold index
+corpus_path: "your-corpus-path"  # path to corpus in '.jsonl' format that store the documents
