@@ -1,5 +1,3 @@
-<div align="center">
-
 # 🔍 SmartSearch: Process Reward-Guided Query Refinement for Search Agents
 
 ## 📑 Table of Contents
@@ -334,15 +332,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 We thank the authors of [ReCall](https://github.com/Agent-RL/ReCall), [VERL](https://github.com/volcengine/verl), and [FlashRAG](https://github.com/RUC-NLPIR/FlashRAG) for their excellent frameworks that inspired this work.
-
----
-
-<div align="center">
-[⬆ Back to Top](#smartsearch)
-
-</div>
-
-
-
-
-
