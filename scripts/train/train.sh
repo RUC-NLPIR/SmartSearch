@@ -82,9 +82,6 @@ if [ ! -d "$CHECKPOINT_SAVE" ]; then
     mkdir -p $CHECKPOINT_SAVE
 fi
 
-export CUDA_VISIBLE_DEVICES=0,1,6,7
-export LD_LIBRARY_PATH=/fs/fast/u2025001217/anaconda3/envs/re-call/lib:$LD_LIBRARY_PATH
-
 nohup python3 -m verl.trainer.main_ppo \
     algorithm.adv_estimator=grpo \
     algorithm.kl_ctrl.kl_coef=0.001 \
