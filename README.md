@@ -1,4 +1,24 @@
+<div align="center">
+
 # 🔍 SmartSearch: Process Reward-Guided Query Refinement for Search Agents
+
+[![arXiv](https://img.shields.io/badge/arXiv-2601.04888-b31b1b.svg)](https://arxiv.org/abs/2601.04888)
+[![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-Model-yellow)](https://huggingface.co/vvv111222/SmartSearch-3B)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+
+**If you find our work useful, please ⭐ star this repository for the latest updates.**
+
+</div>
+
+---
+
+## 📢 Latest News
+
+- **[January 8, 2026]** 📄 Paper available on **[arXiv](https://arxiv.org/abs/2601.04888)**
+- **[January 9, 2026]** 📄 Model available on **[Hugging Face](https://huggingface.co/vvv111222/SmartSearch-3B)**
+
+---
 
 ## 📑 Table of Contents
 
@@ -12,6 +32,7 @@
   - [Serving](#serving)
   - [Inference](#inference)
   - [Training](#training)
+- [Citation](#-citation)
 - [License](#-license)
 - [Acknowledgments](#-acknowledgments)
 
@@ -23,12 +44,15 @@ Large language model (LLM)-based search agents have proven promising for address
 
 **SmartSearch** addresses this challenge through a novel framework built upon two key mechanisms:
 
+<img width="686" height="234" alt="image" src="https://github.com/user-attachments/assets/2f5146b2-048b-4bfc-9eaa-48278eae6887" />
+
 
 1. **Process Rewards**: Provide fine-grained supervision for the quality of each intermediate search query through **Dual-Level Credit Assessment**
 2. **Query Refinement**: Promote query generation optimization by selectively refining low-quality search queries and regenerating subsequent search rounds based on these refinements
 
 To enable the search agent to progressively internalize the ability to improve query quality under process reward guidance, we design a **three-stage curriculum learning framework** that guides the agent through a progression from:
 - **Imitation** → **Alignment** → **Generalization**
+<img width="685" height="328" alt="image" src="https://github.com/user-attachments/assets/805de240-1a12-4161-b7ef-d4d3c93ad00f" />
 
 
 
@@ -60,12 +84,17 @@ SmartSearch/
 ### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/M/SmartSearch.git
+cd SmartSearch
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
 ### Data Preparation
 
-SmartSearch is trained on the `ASearcher` dataset. The training data can be downloaded from [Hugging Face](XXXX).
+SmartSearch is trained on the `ASearcher` dataset. The training data can be downloaded from [Hugging Face](https://huggingface.co/datasets/inclusionAI/ASearcher-train-data/blob/main/ASearcher-Base-35k.jsonl).
 
 To download other test datasets:
 
@@ -97,8 +126,8 @@ python sandbox.py --port {port}
 #### 2. Retriever Service
 
 **Prerequisites:**
-- Download [pre-indexed Wikipedia](XXXX)
-- Download [Wikipedia corpus and retriever models](XXXX)
+- Download [pre-indexed Wikipedia](https://github.com/RUC-NLPIR/FlashRAG?tab=readme-ov-file#index)
+- Download [Wikipedia corpus and retriever models](https://github.com/RUC-NLPIR/FlashRAG/blob/main/docs/original_docs/reproduce_experiment.md#preliminary)
 
 **Configuration:**
 1. Update `scripts/serving/retriever_config.yaml` with correct paths:
@@ -323,6 +352,21 @@ bash train.sh \
 
 ---
 
+## 📝 Citation
+
+If you find SmartSearch useful in your research, please cite our paper:
+
+```bibtex
+@article{smartsearch2026,
+  title={SmartSearch: Process Reward-Guided Query Refinement for Search Agents},
+  author={Tongyu Wen and Guanting Dong and Zhicheng Dou},
+  journal={arXiv preprint arXiv:2601.04888},
+  year={2026}
+}
+```
+
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -331,4 +375,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-We thank the authors of [ReCall](XXXX), [VERL](XXXX), and [FlashRAG](XXXX) for their excellent frameworks that inspired this work.
+We thank the authors of [ReCall](https://github.com/Agent-RL/ReCall), [VERL](https://github.com/volcengine/verl), and [FlashRAG](https://github.com/RUC-NLPIR/FlashRAG) for their excellent frameworks that inspired this work.
+
+---
+
+<div align="center">
+
+[⬆ Back to Top](#smartsearch)
+
+</div>
+
+
+
+
+
